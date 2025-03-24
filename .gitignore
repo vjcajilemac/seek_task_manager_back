@@ -1,1 +1,68 @@
-﻿*.env
+﻿# Ignorar archivos de configuración sensibles (variables de entorno)
+*.env
+.env.local
+.env.production
+.env.development
+.env.test
+
+# Ignorar archivos y carpetas generados por Python
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+*.db
+*.sqlite3
+*.log
+*.egg-info/
+pip-wheel-metadata/
+
+# Ignorar carpetas de entornos virtuales de Python
+env/
+venv/
+task-env/
+
+# Ignorar archivos generados por Docker
+docker-compose.override.yml
+Dockerfile.*
+docker-compose.yml
+.dockerignore
+
+# Ignorar archivos y carpetas generados por IDEs/Editors
+.idea/
+.vscode/
+*.swp
+*.swo
+*.swn
+
+# Ignorar archivos de sistema
+Thumbs.db
+Desktop.ini
+.DS_Store
+
+# Ignorar archivos de caché de pruebas (pytest, tox, etc)
+.pytest_cache/
+.tox/
+.cache/
+htmlcov/
+coverage.xml
+.test-reports/
+
+# Ignorar documentación generada
+docs/_build/
+
+# Ignorar archivos generados por Node.js (Frontend React TypeScript)
+node_modules/
+dist/
+build/
+.yarn/
+.pnpm-debug.log
+
+# Ignorar archivos relacionados con TypeScript
+*.tsbuildinfo
+
+# Ignorar archivos generados por Serverless Framework / AWS
+.serverless/
+
+# Ignorar archivos relacionados con GitHub Actions
+coverage/
+test-reports/
