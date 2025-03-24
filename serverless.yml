@@ -1,0 +1,17 @@
+service: task-manager
+
+provider:
+  name: aws
+  runtime: python3.10
+  environment:
+    MONGO_URL: ${env:MONGO_URL}
+    MONGO_DB_NAME: ${env:MONGO_DB_NAME}
+    SECRET_KEY: ${env:SECRET_KEY}
+
+functions:
+  app:
+    handler: app.main.handler
+    events:
+      - httpApi:
+          path: /{proxy+}
+          method: ANY
